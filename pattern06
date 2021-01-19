@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main()
+{   int n;
+    cout<<"hello folk lets enter the value of n to draw the pattern";
+    cin>>n;
+    cout<<"\n";
+
+    for (int i= 1,a=1,j; i>0; )
+    {
+        for (j = 1; j<=(n); ++j)
+        {   if(i+j>((n+1)/2)&&j<i+((n+1)/2))
+            cout<<"*";
+            else
+            {
+                cout<<" ";
+            }
+            
+
+        }
+        if(a==((n+1)/2))
+            i--;
+        else
+        {
+            i++;
+            a=i;
+        }
+        
+        cout<<"\n";
+    }
+    
+return 0;
+}
