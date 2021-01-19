@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main()
+{   int n;
+    cout<<"hello folk lets enter the value of n to draw the pattern";
+    cin>>n;
+    cout<<"\n";
+
+    for (int i= 1,j; i <=n; ++i)
+    {
+        for (j = 1; j<=n; ++j)
+        {
+            if (j==n||i+j==n+1||i==n)
+                cout<<"*";
+            else
+                cout<<" ";
+
+        }
+        cout<<"\n";
+    }
+    
+return 0;
+}
