@@ -1,0 +1,55 @@
+#include<iostream>
+using namespace std;
+int fact(int n)
+{
+    if(n==1||n==0)
+        return 1;
+    else
+    {
+        return n*fact(n-1);
+    }
+    
+}
+int main()
+{   int n;
+    cout<<"hello folk lets enter the value of n to draw the pattern";
+    cin>>n;
+    cout<<"\n";
+    
+    for (int i= 0,j,a; i <=n; ++i)
+    {
+        for (j = 0,a=0; j<=2*n; ++j)
+        {
+            if (i+j>=n&&j<=i+n)
+            {
+                if(n%2==0) //pascal triangle when n is even
+                {
+                    if((i+j)%2==0)
+                    {   cout<<fact(i)/(fact(a)*fact(i-a));
+                        a++;
+                    }
+                    else
+                    cout<<" ";
+                }
+                else  //pascal triangle when n is odd
+                {
+                    if((i+j)%2!=0)
+                    {   cout<<fact(i)/(fact(a)*fact(i-a));
+                        a++;
+                    }
+                    else
+                        cout<<" ";
+                }
+                
+            }
+            else
+            {
+                cout<<" ";
+            }
+            
+        }
+        cout<<"\n";
+    }
+    
+return 0;
+}
